@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kailash Yadav</title>
+  <meta name="description" content="Kailash Yadav — software engineer, portfolio of projects, technical articles and resume.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="site-header">
+    <nav class="nav container">
+      <a href="#top" class="nav-brand">kailash<span class="accent">.</span></a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#articles">Articles</a></li>
+        <li><a href="#resume">Resume</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ================= HERO ================= -->
+    <section class="hero">
+      <div class="container">
+        <p class="hero-eyebrow mono">~/kailash-yadav</p>
+        <h1 class="hero-title">Kailash <span class="accent">Yadav</span></h1>
+        <p class="hero-subtitle">Software Engineer</p>
+        <p class="hero-desc">
+          I build practical software that is fast, reliable, and easy to reason about.
+          From CLI tools and distributed systems to modern web & desktop applications.
+        </p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#resume" class="btn btn-ghost">Resume</a>
+        </div>
+        <div class="hero-social">
+          <a href="https://github.com/kaiyad" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/kaiyad" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="mailto:kailashyadav0411@gmail.com">Email</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT ================= -->
+    <section id="about" class="section">
+      <div class="container narrow">
+        <span class="section-label mono">01 / about</span>
+        <h2 class="section-title">About Me</h2>
+        <div class="about-grid">
+          <div class="about-text">
+            <p>
+              I'm a software engineer fascinated by systems, developer tools, and
+              building things that live close to the machine — while caring just as
+              much about making them pleasant to use.
+            </p>
+            <p>
+              I work across the stack, from Python and Go backends to distributed
+              systems and data structures, and enjoy shipping complete products —
+              web, desktop, and CLI alike.
+            </p>
+            <p>
+              I visit GitHub whenever I can't sleep, and I'm always learning
+              something new.
+            </p>
+          </div>
+          <aside class="about-stats">
+            <div class="stat">
+              <span class="stat-num">18+</span>
+              <span class="stat-label">Public Repositories</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">3</span>
+              <span class="stat-label">Languages: Python · TypeScript · Go</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">∞</span>
+              <span class="stat-label">Curiosity</span>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS ================= -->
+    <section id="projects" class="section">
+      <div class="container">
+        <span class="section-label mono">02 / projects</span>
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-grid">
+
+          <article class="project-card">
+            <div class="project-head">
+              <h3 class="project-title">
+                <a href="https://github.com/kaiyad/edituh" target="_blank" rel="noopener">Edituh</a>
+              </h3>
+              <div class="project-topics">
+                <span class="hashtag mono">#TypeScript</span>
+                <span class="hashtag mono">#React</span>
+                <span class="hashtag mono">#FastAPI</span>
+              </div>
+            </div>
+            <p class="project-desc">
+              A Confluence/Notion-style documentation editor for the web and desktop.
+              Combines a FastAPI backend with a React frontend (BlockNote + Mantine),
+              featuring math (KaTeX), diagrams (Mermaid), bidirectional links, a
+              knowledge graph, daily notes, presentation mode, and a balanced rope
+              data structure for fast text handling. Ships as desktop installers and a PWA.
+            </p>
+            <div class="project-foot">
+              <a href="https://github.com/kaiyad/edituh" target="_blank" rel="noopener" class="link">View on GitHub →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-head">
+              <h3 class="project-title">
+                <a href="https://github.com/kaiyad/Echo" target="_blank" rel="noopener">Echo</a>
+              </h3>
+              <div class="project-topics">
+                <span class="hashtag mono">#Python</span>
+                <span class="hashtag mono">#Flask</span>
+                <span class="hashtag mono">#SQLAlchemy</span>
+              </div>
+            </div>
+            <p class="project-desc">
+              Micro-blogging web application built with Flask, using SQLAlchemy and
+              SQLite on the backend with Jinja and Bootstrap templates. Features full
+              authentication (login, logout, signup, password reset), post uploads and
+              feeds, following/unfollowing, and user profile editing.
+            </p>
+            <div class="project-foot">
+              <a href="https://github.com/kaiyad/Echo" target="_blank" rel="noopener" class="link">View on GitHub →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-head">
+              <h3 class="project-title">
+                <a href="https://github.com/kaiyad/LibraryManagementSystem" target="_blank" rel="noopener">Library Management System</a>
+              </h3>
+              <div class="project-topics">
+                <span class="hashtag mono">#Python</span>
+                <span class="hashtag mono">#CLI</span>
+                <span class="hashtag mono">#RPC</span>
+              </div>
+            </div>
+            <p class="project-desc">
+              A CLI application that tracks library operations — borrowing books,
+              searching the catalogue, and more. Designed around a client/server
+              architecture with an attention to clean configuration and extensibility.
+            </p>
+            <div class="project-foot">
+              <a href="https://github.com/kaiyad/LibraryManagementSystem" target="_blank" rel="noopener" class="link">View on GitHub →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-head">
+              <h3 class="project-title">
+                <a href="https://github.com/kaiyad/DesignPatterns" target="_blank" rel="noopener">Design Patterns</a>
+              </h3>
+              <div class="project-topics">
+                <span class="hashtag mono">#Python</span>
+                <span class="hashtag mono">#System Design</span>
+              </div>
+            </div>
+            <p class="project-desc">
+              System design concepts implemented with runnable examples — a study
+              collection covering classic design patterns with clean, idiomatic
+              Python implementations.
+            </p>
+            <div class="project-foot">
+              <a href="https://github.com/kaiyad/DesignPatterns" target="_blank" rel="noopener" class="link">View on GitHub →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-head">
+              <h3 class="project-title">
+                <a href="https://github.com/kaiyad/Distributed_Systems" target="_blank" rel="noopener">Distributed Systems</a>
+              </h3>
+              <div class="project-topics">
+                <span class="hashtag mono">#Python</span>
+                <span class="hashtag mono">#Distributed</span>
+              </div>
+            </div>
+            <p class="project-desc">
+              Designing and implementing a software system that operates across
+              multiple computers — focusing on efficient processing, storage, and
+              communication of data.
+            </p>
+            <div class="project-foot">
+              <a href="https://github.com/kaiyad/Distributed_Systems" target="_blank" rel="noopener" class="link">View on GitHub →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-head">
+              <h3 class="project-title">
+                <a href="https://github.com/kaiyad/Network-Packet-Sniffer" target="_blank" rel="noopener">Network Packet Sniffer</a>
+              </h3>
+              <div class="project-topics">
+                <span class="hashtag mono">#Python</span>
+                <span class="hashtag mono">#Networking</span>
+              </div>
+            </div>
+            <p class="project-desc">
+              A network packet sniffer for capturing and inspecting traffic on the
+              wire — a hands-on exploration of networking protocols and raw sockets.
+            </p>
+            <div class="project-foot">
+              <a href="https://github.com/kaiyad/Network-Packet-Sniffer" target="_blank" rel="noopener" class="link">View on GitHub →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-head">
+              <h3 class="project-title">
+                <a href="https://github.com/kaiyad/DeepRacer" target="_blank" rel="noopener">DeepRacer Reward Functions</a>
+              </h3>
+              <div class="project-topics">
+                <span class="hashtag mono">#Python</span>
+                <span class="hashtag mono">#Reinforcement Learning</span>
+              </div>
+            </div>
+            <p class="project-desc">
+              Reward function implementations for AWS DeepRacer — exploring
+              reinforcement learning to train autonomous racing agents.
+            </p>
+            <div class="project-foot">
+              <a href="https://github.com/kaiyad/DeepRacer" target="_blank" rel="noopener" class="link">View on GitHub →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-head">
+              <h3 class="project-title">
+                <a href="https://github.com/kaiyad/go-banking" target="_blank" rel="noopener">Go Banking</a>
+              </h3>
+              <div class="project-topics">
+                <span class="hashtag mono">#Go</span>
+                <span class="hashtag mono">#Backend</span>
+              </div>
+            </div>
+            <p class="project-desc">
+              A banking backend written in Go — exploring systems programming and
+              clean backend architecture in a compiled, concurrent language.
+            </p>
+            <div class="project-foot">
+              <a href="https://github.com/kaiyad/go-banking" target="_blank" rel="noopener" class="link">View on GitHub →</a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <div class="project-head">
+              <h3 class="project-title">
+                <a href="https://github.com/kaiyad/pip2poetry" target="_blank" rel="noopener">pip2poetry</a>
+              </h3>
+              <div class="project-topics">
+                <span class="hashtag mono">#Python</span>
+                <span class="hashtag mono">#Dev Tools</span>
+              </div>
+            </div>
+            <p class="project-desc">
+              A script that helps you migrate from pip to Poetry — a small developer
+              tool that automates dependency management setup.
+            </p>
+            <div class="project-foot">
+              <a href="https://github.com/kaiyad/pip2poetry" target="_blank" rel="noopener" class="link">View on GitHub →</a>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="project-more">
+          <a href="https://github.com/kaiyad?tab=repositories" target="_blank" rel="noopener" class="btn btn-ghost">See all repositories →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ARTICLES ================= -->
+    <section id="articles" class="section">
+      <div class="container narrow">
+        <span class="section-label mono">03 / technical articles</span>
+        <h2 class="section-title">Writing</h2>
+
+        <div class="article-list">
+          <article class="article-item">
+            <div class="article-meta mono">
+              <span class="article-date">Coming soon</span>
+            </div>
+            <h3 class="article-title"><a href="#">Deep dive into balanced rope data structures for text editing</a></h3>
+            <p class="article-excerpt">
+              How I built a rope data structure for the Edituh editor — and why it beats a plain string for large documents.
+            </p>
+          </article>
+
+          <article class="article-item">
+            <div class="article-meta mono">
+              <span class="article-date">Coming soon</span>
+            </div>
+            <h3 class="article-title"><a href="#">Building a documentation editor for the web and desktop</a></h3>
+            <p class="article-excerpt">
+              Structuring Edituh with FastAPI, React, and a shared document model — lessons from shipping a PWA plus desktop installers.
+            </p>
+          </article>
+
+          <article class="article-item">
+            <div class="article-meta mono">
+              <span class="article-date">Coming soon</span>
+            </div>
+            <h3 class="article-title"><a href="#">How distributed systems stay consistent (a practical tour)</a></h3>
+            <p class="article-excerpt">
+              Notes from building a multi-node system: consensus, replication, and the trade-offs you actually hit in practice.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= RESUME ================= -->
+    <section id="resume" class="section">
+      <div class="container narrow">
+        <span class="section-label mono">04 / resume</span>
+        <h2 class="section-title">Resume</h2>
+
+        <div class="resume-block">
+          <h3 class="resume-subtitle">Experience</h3>
+          <div class="resume-entry">
+            <div class="resume-row">
+              <h4 class="resume-role">Software Engineer</h4>
+              <span class="resume-dates mono">—</span>
+            </div>
+            <p class="resume-desc">
+              Building practical software across web, desktop, and systems — details coming soon.
+            </p>
+          </div>
+        </div>
+
+        <div class="resume-block">
+          <h3 class="resume-subtitle">Skills</h3>
+          <div class="skills">
+            <span class="skill-chip mono">Python</span>
+            <span class="skill-chip mono">Flask</span>
+            <span class="skill-chip mono">FastAPI</span>
+            <span class="skill-chip mono">SQLAlchemy</span>
+            <span class="skill-chip mono">Go</span>
+            <span class="skill-chip mono">TypeScript</span>
+            <span class="skill-chip mono">React</span>
+            <span class="skill-chip mono">Rope Data Structures</span>
+            <span class="skill-chip mono">Distributed Systems</span>
+            <span class="skill-chip mono">Networking</span>
+            <span class="skill-chip mono">Reinforcement Learning</span>
+            <span class="skill-chip mono">CLI Development</span>
+          </div>
+        </div>
+
+        <div class="resume-block">
+          <h3 class="resume-subtitle">Education & Certifications</h3>
+          <div class="resume-entry">
+            <p class="resume-desc">
+              Certifications in algorithms and data structures (Algorithmic Toolbox),
+              plus course work in data structures and design patterns.
+            </p>
+          </div>
+        </div>
+
+        <div class="resume-actions">
+          <a href="https://github.com/kaiyad" target="_blank" rel="noopener" class="btn btn-primary">View GitHub Profile</a>
+          <a href="https://www.linkedin.com/in/kaiyad" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p class="mono">© 2026 Kailash Yadav. Built with care. <span class="blink">▊</span></p>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <script src="assets/js/script.js"></script>
+</body>
+</html>
