@@ -1,13 +1,21 @@
 # Portfolio — Kailash Yadav
 
 Dark-mode portfolio built as a static site for GitHub Pages.
+Design inspired by [rybkr.com](https://rybkr.com/) — a minimal, vim-themed
+single page with a statusline, command palette, and keyboard navigation.
 
 ## Sections
 
-- **About** — who I am
-- **Projects** — feature highlights from public GitHub repos (Edituh, Echo, Library management system, Design Patterns, Distributed Systems, and more)
-- **Technical Articles** — writing (coming soon)
-- **Resume** — skills, experience, and links
+- **Home** — headshot + About / Currently / Hobbies
+- **Projects** — feature highlights from public GitHub repos
+- **Resume** — skills and experience
+
+## Keyboard navigation
+
+- `:` a command (`:help`, `:projects`, `:theme`, …)
+- `/` or `⌘K` — quick search
+- `?` — show shortcuts
+- `j`/`k`, `Ctrl+d`/`Ctrl+u`, `gg`/`G`, `{`/`}` — scroll
 
 ## Local development
 

@@ -12,348 +12,331 @@
   <meta property="og:url" content="https://kaiyad.github.io/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 </head>
 <body>
-  <div class="noise"></div>
 
-  <header class="site-header">
-    <nav class="nav container">
-      <a href="#top" class="nav-brand">kailash<span class="accent">.</span></a>
-      <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#articles">Articles</a></li>
-        <li><a href="#resume">Resume</a></li>
+  <header class="header">
+    <nav class="nav">
+      <div class="logo">
+        <a href="#top" data-nav>Kailash Yadav</a>
+      </div>
+      <ul id="menu">
+        <li><a href="#about" data-nav>About</a></li>
+        <li><a href="#projects" data-nav>Projects</a></li>
+        <li><a href="#resume" data-nav>Resume</a></li>
       </ul>
-      <button class="menu-toggle" aria-label="Toggle navigation" aria-expanded="false">
-        <span></span><span></span><span></span>
-      </button>
+      <div class="logo-switches">
+        <span class="search-hint-key" title="Quick search">/</span>
+        <button id="theme-toggle" title="Toggle theme" aria-label="Toggle theme">
+          <svg id="sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.6"/><path d="M12 2.2v2.6M12 19.2v2.6M2.2 12h2.6M19.2 12h2.6M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M19.4 4.6l-1.8 1.8M6.4 17.6l-1.8 1.8"/></svg>
+          <svg id="moon" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>
+        </button>
+      </div>
     </nav>
   </header>
 
-  <main id="top">
+  <main class="main" id="top">
 
-    <!-- ================= HERO ================= -->
-    <section class="hero">
-      <div class="container">
-        <p class="hero-eyebrow mono">~/kailash-yadav</p>
-        <h1 class="hero-title">Kailash <span class="accent">Yadav</span></h1>
-        <p class="hero-subtitle">Software Engineer</p>
-        <p class="hero-desc">
-          I build fast, reliable software across web, desktop, and systems.
+    <!-- ================= HOME INTRO ================= -->
+    <section class="home-intro">
+      <div class="home-boids" aria-hidden="true" data-boids></div>
+
+      <div class="home-hero">
+        <div class="home-identity">
+          <img class="home-headshot" src="assets/img/headshot.svg" alt="Kailash Yadav">
+          <h1 class="home-name">Kailash Yadav</h1>
+        </div>
+      </div>
+
+      <section class="home-section home-about" id="about">
+        <h2 class="home-label">About</h2>
+        <p>
+          I'm a software engineer focused on building systems that are fast,
+          reliable, and a pleasure to work with. I work across the stack — from
+          Python and Go backends to modern web and desktop applications.
         </p>
-        <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">View Projects</a>
-          <a href="#resume" class="btn btn-ghost">Resume</a>
-        </div>
-        <div class="hero-social">
-          <a href="https://github.com/kaiyad" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
-            <svg viewBox="0 0 16 16" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.61-.18 1.3-.27 2-.27s1.39.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-            <span>GitHub</span>
-          </a>
-          <a href="https://www.linkedin.com/in/kaiyad" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
-            <span>LinkedIn</span>
-          </a>
-          <a href="mailto:kailashyadav0411@gmail.com" class="social-link" aria-label="Email">
-            <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-            <span>kailashyadav0411@gmail.com</span>
-          </a>
-        </div>
-      </div>
-    </section>
+        <p>
+          I care about clean architecture, developer experience, and shipping
+          complete products, not demos.
+        </p>
+      </section>
 
-    <!-- ================= ABOUT ================= -->
-    <section id="about" class="section reveal">
-      <div class="container narrow">
-        <span class="section-label mono">01 / about</span>
-        <h2 class="section-title">About Me</h2>
-        <div class="about-grid">
-          <div class="about-text">
-            <p>
-              I'm a software engineer focused on building systems that are fast,
-              reliable, and a pleasure to work with. I work across the stack —
-              from Python and Go backends to modern web and desktop applications.
-            </p>
-            <p>
-              I care about clean architecture, developer experience, and shipping
-              complete products — not demos.
-            </p>
-          </div>
-          <aside class="about-stats">
-            <div class="stat">
-              <span class="stat-num">9+</span>
-              <span class="stat-label">Projects shipped across web, desktop, CLI, and systems</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num">3</span>
-              <span class="stat-label">Core languages: Python, Go, TypeScript</span>
-            </div>
-            <div class="stat">
-              <span class="stat-num">Full</span>
-              <span class="stat-label">Stack: FastAPI · React · SQLAlchemy · networking</span>
-            </div>
-          </aside>
-        </div>
+      <section class="home-section" id="currently">
+        <h2 class="home-label">Currently</h2>
+        <p>
+          Building <a href="https://github.com/kaiyad/edituh" target="_blank" rel="noopener">Edituh</a>,
+          a Confluence-style documentation editor that ships as a PWA and desktop
+          installers. Exploring distributed systems, networking, and developer
+          tools when I get the chance.
+        </p>
+      </section>
+
+      <section class="home-section" id="hobbies">
+        <h2 class="home-label">Hobbies</h2>
+        <p>
+          Outside of work I love long drives, photography, tinkering with
+          hardware, and unwinding with a good book.
+        </p>
+      </section>
+
+      <div class="home-links">
+        <a href="https://github.com/kaiyad" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.61-.18 1.3-.27 2-.27s1.39.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/kaiyad" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
+        <a href="mailto:kailashyadav0411@gmail.com" class="email-copy" aria-label="Email" title="Email">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </a>
+        <span class="home-email-status" id="emailStatus">copied</span>
       </div>
+
+      <button class="home-command-hint" data-open-help aria-haspopup="dialog">
+        <span>Type</span><kbd>:</kbd><span>help</span><span>for help navigating</span>
+      </button>
     </section>
 
     <!-- ================= PROJECTS ================= -->
-    <section id="projects" class="section">
-      <div class="container">
-        <span class="section-label mono">02 / projects</span>
-        <h2 class="section-title">Projects</h2>
+    <section class="page-section" id="projects">
+      <h2 class="section-title">Projects</h2>
 
-        <div class="project-grid">
+      <div class="post-list">
 
-          <article class="project-card reveal">
-            <div class="project-head">
-              <h3 class="project-title">
-                <a href="https://github.com/kaiyad/edituh" target="_blank" rel="noopener">Edituh</a>
-              </h3>
-              <div class="project-topics">
-                <span class="hashtag mono">#TypeScript</span>
-                <span class="hashtag mono">#React</span>
-                <span class="hashtag mono">#FastAPI</span>
-              </div>
-            </div>
-            <p class="project-desc">
+        <article class="post-entry">
+          <header class="entry-header">
+            <h2><a href="https://github.com/kaiyad/edituh" target="_blank" rel="noopener">Edituh</a></h2>
+          </header>
+          <div class="entry-meta">
+            <span class="entry-date">Web · Desktop</span>
+          </div>
+          <div class="entry-content">
+            <p>
               A Confluence/Notion-style documentation editor for web and desktop.
               Built on FastAPI + React (BlockNote, Mantine) with math, diagrams,
               bidirectional links, knowledge graph, daily notes, and a balanced
               rope data structure for fast text handling. Ships as desktop
               installers and a PWA.
             </p>
-            <div class="project-foot">
-              <a href="https://github.com/kaiyad/edituh" target="_blank" rel="noopener" class="link">View on GitHub →</a>
+          </div>
+          <footer class="entry-footer">
+            <div class="entry-tags">
+              <span class="post-tag">TypeScript</span>
+              <span class="post-tag">React</span>
+              <span class="post-tag">FastAPI</span>
             </div>
-          </article>
+          </footer>
+        </article>
 
-          <article class="project-card reveal">
-            <div class="project-head">
-              <h3 class="project-title">
-                <a href="https://github.com/kaiyad/go-banking" target="_blank" rel="noopener">Go Banking</a>
-              </h3>
-              <div class="project-topics">
-                <span class="hashtag mono">#Go</span>
-                <span class="hashtag mono">#Backend</span>
-                <span class="hashtag mono">#SQLite</span>
-              </div>
-            </div>
-            <p class="project-desc">
+        <article class="post-entry">
+          <header class="entry-header">
+            <h2><a href="https://github.com/kaiyad/go-banking" target="_blank" rel="noopener">Go Banking</a></h2>
+          </header>
+          <div class="entry-meta">
+            <span class="entry-date">Backend</span>
+          </div>
+          <div class="entry-content">
+            <p>
               A banking backend written in Go — REST API with concurrent-safe
               transactions, SQLite persistence, and clean layered architecture.
             </p>
-            <div class="project-foot">
-              <a href="https://github.com/kaiyad/go-banking" target="_blank" rel="noopener" class="link">View on GitHub →</a>
+          </div>
+          <footer class="entry-footer">
+            <div class="entry-tags">
+              <span class="post-tag">Go</span>
+              <span class="post-tag">REST</span>
+              <span class="post-tag">SQLite</span>
             </div>
-          </article>
+          </footer>
+        </article>
 
-          <article class="project-card reveal">
-            <div class="project-head">
-              <h3 class="project-title">
-                <a href="https://github.com/kaiyad/Echo" target="_blank" rel="noopener">Echo</a>
-              </h3>
-              <div class="project-topics">
-                <span class="hashtag mono">#Python</span>
-                <span class="hashtag mono">#Flask</span>
-                <span class="hashtag mono">#SQLAlchemy</span>
-              </div>
-            </div>
-            <p class="project-desc">
+        <article class="post-entry">
+          <header class="entry-header">
+            <h2><a href="https://github.com/kaiyad/Echo" target="_blank" rel="noopener">Echo</a></h2>
+          </header>
+          <div class="entry-meta">
+            <span class="entry-date">Web</span>
+          </div>
+          <div class="entry-content">
+            <p>
               A micro-blogging platform with full authentication, post feeds,
               following/unfollowing, and user profiles — built with Flask,
               SQLAlchemy, and SQLite.
             </p>
-            <div class="project-foot">
-              <a href="https://github.com/kaiyad/Echo" target="_blank" rel="noopener" class="link">View on GitHub →</a>
+          </div>
+          <footer class="entry-footer">
+            <div class="entry-tags">
+              <span class="post-tag">Python</span>
+              <span class="post-tag">Flask</span>
+              <span class="post-tag">SQLAlchemy</span>
             </div>
-          </article>
+          </footer>
+        </article>
 
-          <article class="project-card reveal">
-            <div class="project-head">
-              <h3 class="project-title">
-                <a href="https://github.com/kaiyad/Distributed_Systems" target="_blank" rel="noopener">Distributed Systems</a>
-              </h3>
-              <div class="project-topics">
-                <span class="hashtag mono">#Python</span>
-                <span class="hashtag mono">#Distributed</span>
-              </div>
-            </div>
-            <p class="project-desc">
-              A multi-node system designed for efficient processing, storage, and
-              communication across machines — a hands-on study of distributed
-              computing patterns.
-            </p>
-            <div class="project-foot">
-              <a href="https://github.com/kaiyad/Distributed_Systems" target="_blank" rel="noopener" class="link">View on GitHub →</a>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-head">
-              <h3 class="project-title">
-                <a href="https://github.com/kaiyad/Network-Packet-Sniffer" target="_blank" rel="noopener">Packet Sniffer</a>
-              </h3>
-              <div class="project-topics">
-                <span class="hashtag mono">#Python</span>
-                <span class="hashtag mono">#Networking</span>
-              </div>
-            </div>
-            <p class="project-desc">
+        <article class="post-entry">
+          <header class="entry-header">
+            <h2><a href="https://github.com/kaiyad/Network-Packet-Sniffer" target="_blank" rel="noopener">Packet Sniffer</a></h2>
+          </header>
+          <div class="entry-meta">
+            <span class="entry-date">Systems</span>
+          </div>
+          <div class="entry-content">
+            <p>
               A network packet sniffer for capturing and inspecting traffic using
               raw sockets — a deep exploration of networking protocols.
             </p>
-            <div class="project-foot">
-              <a href="https://github.com/kaiyad/Network-Packet-Sniffer" target="_blank" rel="noopener" class="link">View on GitHub →</a>
+          </div>
+          <footer class="entry-footer">
+            <div class="entry-tags">
+              <span class="post-tag">Python</span>
+              <span class="post-tag">Networking</span>
             </div>
-          </article>
+          </footer>
+        </article>
 
-          <article class="project-card reveal">
-            <div class="project-head">
-              <h3 class="project-title">
-                <a href="https://github.com/kaiyad/pip2poetry" target="_blank" rel="noopener">pip2poetry</a>
-              </h3>
-              <div class="project-topics">
-                <span class="hashtag mono">#Python</span>
-                <span class="hashtag mono">#Dev Tools</span>
-              </div>
-            </div>
-            <p class="project-desc">
+        <article class="post-entry">
+          <header class="entry-header">
+            <h2><a href="https://github.com/kaiyad/pip2poetry" target="_blank" rel="noopener">pip2poetry</a></h2>
+          </header>
+          <div class="entry-meta">
+            <span class="entry-date">Dev Tools</span>
+          </div>
+          <div class="entry-content">
+            <p>
               A developer tool that automates migrating projects from pip to
               Poetry — eliminating the manual dependency setup.
             </p>
-            <div class="project-foot">
-              <a href="https://github.com/kaiyad/pip2poetry" target="_blank" rel="noopener" class="link">View on GitHub →</a>
+          </div>
+          <footer class="entry-footer">
+            <div class="entry-tags">
+              <span class="post-tag">Python</span>
+              <span class="post-tag">CLI</span>
             </div>
-          </article>
+          </footer>
+        </article>
 
-        </div>
-
-        <div class="project-more">
-          <a href="https://github.com/kaiyad?tab=repositories" target="_blank" rel="noopener" class="btn btn-ghost">See all repositories →</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ================= WRITING ================= -->
-    <section id="articles" class="section">
-      <div class="container narrow">
-        <span class="section-label mono">03 / writing</span>
-        <h2 class="section-title">Writing</h2>
-
-        <div class="article-list">
-          <article class="article-item reveal">
-            <div class="article-meta mono">
-              <span class="article-date">In progress</span>
-            </div>
-            <h3 class="article-title">Deep dive into balanced rope data structures for text editing</h3>
-            <p class="article-excerpt">
-              How I built a rope data structure for the Edituh editor — and why it beats a plain string for large documents.
-            </p>
-          </article>
-
-          <article class="article-item reveal">
-            <div class="article-meta mono">
-              <span class="article-date">In progress</span>
-            </div>
-            <h3 class="article-title">Building a documentation editor for the web and desktop</h3>
-            <p class="article-excerpt">
-              Structuring Edituh with FastAPI, React, and a shared document model — lessons from shipping a PWA plus desktop installers.
-            </p>
-          </article>
-
-          <article class="article-item reveal">
-            <div class="article-meta mono">
-              <span class="article-date">Planned</span>
-            </div>
-            <h3 class="article-title">How distributed systems stay consistent</h3>
-            <p class="article-excerpt">
-              Notes from building a multi-node system: consensus, replication, and the trade-offs you actually hit in practice.
-            </p>
-          </article>
-        </div>
       </div>
     </section>
 
     <!-- ================= RESUME ================= -->
-    <section id="resume" class="section reveal">
-      <div class="container narrow">
-        <span class="section-label mono">04 / resume</span>
-        <h2 class="section-title">Resume</h2>
+    <section class="page-section" id="resume">
+      <h2 class="section-title">Resume</h2>
 
-        <div class="resume-block">
-          <h3 class="resume-subtitle">Experience</h3>
-
-          <div class="resume-entry">
-            <div class="resume-row">
-              <h4 class="resume-role">Software Engineer</h4>
-            </div>
-            <p class="resume-desc">
+      <div class="post-list">
+        <article class="post-entry">
+          <header class="entry-header">
+            <h2>Software Engineer</h2>
+          </header>
+          <div class="entry-meta">
+            <span class="entry-date">Experience</span>
+          </div>
+          <div class="entry-content">
+            <p>
               Building and shipping production software across web, desktop, and
-              systems. Focus areas: backend APIs, developer tools, and clean
-              architecture.
+              systems. Focus areas: backend APIs, developer tools, networking,
+              and clean architecture.
             </p>
           </div>
-        </div>
-
-        <div class="resume-block">
-          <h3 class="resume-subtitle">Skills</h3>
-          <div class="skills">
-            <span class="skill-chip mono">Python</span>
-            <span class="skill-chip mono">Go</span>
-            <span class="skill-chip mono">TypeScript</span>
-            <span class="skill-chip mono">React</span>
-            <span class="skill-chip mono">FastAPI</span>
-            <span class="skill-chip mono">Flask</span>
-            <span class="skill-chip mono">SQLAlchemy</span>
-            <span class="skill-chip mono">SQLite</span>
-            <span class="skill-chip mono">REST APIs</span>
-            <span class="skill-chip mono">Distributed Systems</span>
-            <span class="skill-chip mono">Networking</span>
-            <span class="skill-chip mono">Data Structures</span>
-            <span class="skill-chip mono">CLI Development</span>
-            <span class="skill-chip mono">System Design</span>
-          </div>
-        </div>
-
-        <div class="resume-block">
-          <h3 class="resume-subtitle">Education & Certifications</h3>
-          <div class="resume-entry">
-            <div class="resume-row">
-              <h4 class="resume-role">Algorithmic Toolbox</h4>
-              <span class="resume-dates mono">Certification</span>
+          <footer class="entry-footer">
+            <div class="entry-tags">
+              <span class="post-tag">Python</span>
+              <span class="post-tag">Go</span>
+              <span class="post-tag">TypeScript</span>
+              <span class="post-tag">React</span>
+              <span class="post-tag">FastAPI</span>
+              <span class="post-tag">Distributed Systems</span>
+              <span class="post-tag">Networking</span>
             </div>
-            <div class="resume-row resume-row-sub">
-              <h4 class="resume-role">Data Structures</h4>
-              <span class="resume-dates mono">Coursework</span>
-            </div>
-            <div class="resume-row resume-row-sub">
-              <h4 class="resume-role">Design Patterns</h4>
-              <span class="resume-dates mono">Coursework</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="resume-actions">
-          <a href="https://github.com/kaiyad" target="_blank" rel="noopener" class="btn btn-primary">View GitHub Profile</a>
-          <a href="https://www.linkedin.com/in/kaiyad" target="_blank" rel="noopener" class="btn btn-ghost">LinkedIn</a>
-        </div>
+          </footer>
+        </article>
       </div>
+
     </section>
 
   </main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p class="mono">© 2026 Kailash Yadav. Built with care.</p>
-    </div>
+  <footer class="footer">
+    <span>© 2026 </span><a href="#top" data-nav>Kailash Yadav</a><span> · </span><span>Built with care.</span>
   </footer>
 
-  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
+
+  <!-- ================= STATUSLINE ================= -->
+  <div class="statusline" id="statusline" aria-hidden="true">
+    <div class="statusline-main">
+      <div class="statusline-left">
+        <span class="statusline-mode" id="statusMode">NORMAL</span>
+        <span class="statusline-section" id="statusSection">~</span>
+        <span class="statusline-path" id="statusPath">~/kailash-yadav</span>
+      </div>
+      <div class="statusline-right">
+        <span class="statusline-position" id="statusPosition">1:1</span>
+      </div>
+    </div>
+    <div class="statusline-command-wrap" id="commandWrap">
+      <span class="statusline-command" id="commandDisplay">:</span>
+      <input class="statusline-command-input" id="commandInput" type="text" autocomplete="off" spellcheck="false" aria-label="Command">
+      <div class="statusline-completions" id="completions" hidden></div>
+    </div>
+  </div>
+
+  <!-- ================= COMMAND PALETTE / SEARCH ================= -->
+  <div class="command-palette" id="commandPalette" role="dialog" aria-modal="true" aria-label="Search">
+    <div class="command-palette-backdrop" data-close-palette></div>
+    <div class="command-palette-modal">
+      <div class="command-palette-header">
+        <svg class="command-palette-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
+        <span class="command-palette-prompt" aria-hidden="true">:</span>
+        <input id="command-palette-input" placeholder="Search or type a command…" autocomplete="off" spellcheck="false">
+        <span class="command-palette-hint">esc</span>
+      </div>
+      <div class="command-palette-results" id="commandPaletteResults"></div>
+    </div>
+  </div>
+
+  <!-- ================= SHORTCUTS MODAL ================= -->
+  <div class="shortcuts-modal" id="shortcutsModal" role="dialog" aria-modal="true" aria-label="Keyboard shortcuts">
+    <div class="shortcuts-modal-backdrop" data-close-shortcuts></div>
+    <div class="shortcuts-modal-content">
+      <div class="shortcuts-modal-header">
+        <h2 class="shortcuts-modal-title">:help — Shortcuts</h2>
+        <button class="shortcuts-modal-close" data-close-shortcuts aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+      </div>
+      <div class="shortcuts-help-grid">
+        <section class="shortcuts-section">
+          <h3 class="shortcuts-section-title">Keys</h3>
+          <div class="shortcuts-list">
+            <div class="shortcut-row"><span class="shortcut-label">Open search</span><span class="shortcut-keys"><span class="shortcut-combo"><kbd class="shortcut-key">⌘</kbd><kbd class="shortcut-key">K</kbd></span></span></div>
+            <div class="shortcut-row"><span class="shortcut-label">Quick search</span><span class="shortcut-keys"><kbd class="shortcut-key">/</kbd></span></div>
+            <div class="shortcut-row"><span class="shortcut-label">Command mode</span><span class="shortcut-keys"><kbd class="shortcut-key">:</kbd></span></div>
+            <div class="shortcut-row"><span class="shortcut-label">Show this help</span><span class="shortcut-keys"><kbd class="shortcut-key">?</kbd></span></div>
+            <div class="shortcut-row"><span class="shortcut-label">Scroll</span><span class="shortcut-keys"><span class="shortcut-combo"><kbd class="shortcut-key">j</kbd><span class="shortcut-key-separator">/</span><kbd class="shortcut-key">k</kbd></span></span></div>
+            <div class="shortcut-row"><span class="shortcut-label">Half page</span><span class="shortcut-keys"><span class="shortcut-combo"><kbd class="shortcut-key">Ctrl</kbd><kbd class="shortcut-key">d</kbd></span></span></div>
+            <div class="shortcut-row"><span class="shortcut-label">Top</span><span class="shortcut-keys"><span class="shortcut-combo"><kbd class="shortcut-key">g</kbd><kbd class="shortcut-key">g</kbd></span></span></div>
+            <div class="shortcut-row"><span class="shortcut-label">Bottom</span><span class="shortcut-keys"><kbd class="shortcut-key">G</kbd></span></div>
+            <div class="shortcut-row"><span class="shortcut-label">Next section</span><span class="shortcut-keys"><kbd class="shortcut-key">}</kbd></span></div>
+            <div class="shortcut-row"><span class="shortcut-label">Previous section</span><span class="shortcut-keys"><kbd class="shortcut-key">{</kbd></span></div>
+            <div class="shortcut-row"><span class="shortcut-label">Close</span><span class="shortcut-keys"><kbd class="shortcut-key">Esc</kbd></span></div>
+          </div>
+        </section>
+        <section class="shortcuts-section">
+          <h3 class="shortcuts-section-title">Commands</h3>
+          <div class="command-help-row"><span>:home</span><kbd class="command-help-key">Open home</kbd></div>
+          <div class="command-help-row"><span>:projects</span><kbd class="command-help-key">Open projects</kbd></div>
+          <div class="command-help-row"><span>:resume</span><kbd class="command-help-key">Open resume</kbd></div>
+          <div class="command-help-row"><span>:help</span><kbd class="command-help-key">Show this help</kbd></div>
+          <div class="command-help-row"><span>:theme</span><kbd class="command-help-key">Toggle theme</kbd></div>
+          <div class="command-help-row"><span>:top</span><kbd class="command-help-key">Scroll to top</kbd></div>
+          <div class="command-help-row"><span>:bot</span><kbd class="command-help-key">Scroll to bottom</kbd></div>
+        </section>
+      </div>
+    </div>
+  </div>
 
   <script src="assets/js/script.js"></script>
 </body>
