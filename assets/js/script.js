@@ -1,5 +1,5 @@
 /* ============================================================
-   Kailash Yadav — rybkr.com-style vim UI
+   kailash(1) — man page shell with pager keybindings
    ============================================================ */
 
 /* ---------- DOM refs ---------- */
@@ -25,21 +25,27 @@ const paletteResults = document.getElementById('commandPaletteResults');
 const shortcutsModal = document.getElementById('shortcutsModal');
 const emailStatus = document.getElementById('emailStatus');
 
+const gitlog = document.getElementById('gitlog');
+const gitlogToggle = document.getElementById('gitlogToggle');
+
 /* ---------- Sections ---------- */
-const sections = Array.from(document.querySelectorAll('.home-section, .page-section'))
-  .filter(s => s.id && s.id !== 'about')
-  .map(s => s.id);
-const HOME_ID = 'home';
+const sections = Array.from(document.querySelectorAll('.man-section'))
+  .map(s => s.id)
+  .filter(Boolean);
+const FIRST_ID = sections[0] || 'name';
 
 function activeSectionId() {
-  let best = HOME_ID;
+  let best = FIRST_ID;
   let bestTop = -Infinity;
-  const marker = window.innerHeight * 0.4;
-  [...sections, HOME_ID].forEach(id => {
-    const el = id === HOME_ID ? document.querySelector('.home-intro') : document.getElementById(id);
+  const marker = window.innerHeight * 0.35;
+  sections.forEach(id => {
+    const el = document.getElementById(id);
     if (!el) return;
     const top = el.getBoundingClientRect().top;
-    if (top <= marker && top > bestTop) best = id;
+    if (top <= marker && top > bestTop) {
+      best = id;
+      bestTop = top;
+    }
   });
   return best;
 }
@@ -57,10 +63,13 @@ function updateStatusline() {
   const { text, section } = fmtPosition();
   if (statusPosition) statusPosition.textContent = text;
   if (statusSection) {
-    statusSection.textContent = section === HOME_ID ? '~' : section;
+    statusSection.textContent = section.replace(/-/g, ' ').toUpperCase();
   }
   if (statusPath) {
-    statusPath.textContent = `~/kailash-yadav${section === HOME_ID ? '' : '/' + section}`;
+    statusPath.textContent = `man://kailash.1#${section}`;
+  }
+  if (backToTop) {
+    backToTop.classList.toggle('visible', window.scrollY > window.innerHeight * 0.6);
   }
 }
 
@@ -102,7 +111,7 @@ if (backToTop) {
 }
 
 /* ---------- Email copy ---------- */
-document.querySelectorAll('.home-links button.email-copy, .home-links a.email-copy').forEach(btn => {
+document.querySelectorAll('.man-links .email-copy').forEach(btn => {
   btn.addEventListener('click', async () => {
     const text = btn.getAttribute('data-email') || 'kailashyadav0411@gmail.com';
     try {
@@ -121,21 +130,70 @@ document.querySelectorAll('.home-links button.email-copy, .home-links a.email-co
   });
 });
 
+/* ---------- Git log (HISTORY) ---------- */
+function setCommitExpanded(head, open) {
+  head.setAttribute('aria-expanded', String(open));
+  const bodyEl = document.getElementById(head.getAttribute('aria-controls'));
+  if (bodyEl) bodyEl.hidden = !open;
+}
+
+function setOneline(on) {
+  if (!gitlog) return;
+  gitlog.classList.toggle('is-oneline', on);
+  if (gitlogToggle) {
+    gitlogToggle.setAttribute('aria-pressed', String(on));
+    gitlogToggle.textContent = on ? '--stat' : '--oneline';
+  }
+}
+
+function toggleOneline() {
+  if (!gitlog) return;
+  setOneline(!gitlog.classList.contains('is-oneline'));
+  scrollToId('history');
+}
+
+function expandAllCommits() {
+  if (!gitlog) return;
+  setOneline(false);
+  gitlog.querySelectorAll('.commit-head').forEach(head => setCommitExpanded(head, true));
+  scrollToId('history');
+}
+
+if (gitlog) {
+  gitlog.querySelectorAll('.commit-head').forEach(head => {
+    head.addEventListener('click', () => {
+      setCommitExpanded(head, head.getAttribute('aria-expanded') !== 'true');
+    });
+  });
+}
+
+if (gitlog && gitlogToggle) {
+  gitlogToggle.addEventListener('click', () => setOneline(!gitlog.classList.contains('is-oneline')));
+}
+
 /* ---------- Command mode (statusline) ---------- */
 const commands = [
-  { name: 'home', aliases: ['h'], description: 'Scroll to top', run: () => scrollToId('home') },
-  { name: 'projects', aliases: ['proj'], description: 'Scroll to projects', run: () => scrollToId('projects') },
-  { name: 'resume', aliases: ['r'], description: 'Scroll to resume', run: () => scrollToId('resume') },
-  { name: 'help', aliases: ['?'], description: 'Show keyboard shortcuts', run: openShortcuts },
+  { name: 'name', aliases: ['n'], description: 'Top of the page', run: () => scrollToId('name') },
+  { name: 'synopsis', aliases: ['syn'], description: 'How to invoke me', run: () => scrollToId('synopsis') },
+  { name: 'description', aliases: ['desc', 'about'], description: 'What I do', run: () => scrollToId('description') },
+  { name: 'options', aliases: ['opt', 'stack'], description: 'Stack and domains', run: () => scrollToId('options') },
+  { name: 'history', aliases: ['resume', 'experience'], description: 'Experience, as git log', run: () => scrollToId('history') },
+  { name: 'log', aliases: ['oneline', 'stat'], description: 'Toggle git log --oneline', run: toggleOneline },
+  { name: 'examples', aliases: ['projects', 'proj'], description: 'Projects', run: () => scrollToId('examples') },
+  { name: 'environment', aliases: ['env', 'hobbies'], description: 'Setup and hobbies', run: () => scrollToId('environment') },
+  { name: 'bugs', aliases: ['issues'], description: 'Known issues', run: () => scrollToId('bugs') },
+  { name: 'seealso', aliases: ['links', 'contact', 'mail'], description: 'Links and email', run: () => scrollToId('see-also') },
+  { name: 'help', aliases: ['?'], description: 'Summary of keys', run: openShortcuts },
   { name: 'theme', aliases: ['colorscheme'], description: 'Toggle theme', run: toggleTheme },
   { name: 'top', aliases: ['gg'], description: 'Scroll to top', run: () => window.scrollTo({ top: 0, behavior: 'smooth' }) },
   { name: 'bot', aliases: ['G'], description: 'Scroll to bottom', run: () => window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' }) },
+  { name: 'q', aliases: ['quit', 'wq'], description: 'Back to the top', run: () => window.scrollTo({ top: 0, behavior: 'smooth' }) },
 ];
 
 function findSectionTop(id) {
-  if (!id || id === 'home') return 0;
+  if (!id) return 0;
   const el = document.getElementById(id);
-  if (!el) return 0;
+  if (!el || id === FIRST_ID) return 0;
   return el.getBoundingClientRect().top + window.scrollY - 80;
 }
 
@@ -223,6 +281,18 @@ commandInput.addEventListener('blur', () => {
 });
 
 /* ---------- Command palette / search ---------- */
+const searchItems = [
+  { title: 'NAME', meta: 'Kailash Yadav — software engineer', section: 'name', keywords: 'who bio intro' },
+  { title: 'SYNOPSIS', meta: 'How to invoke me', section: 'synopsis', keywords: 'usage flags' },
+  { title: 'DESCRIPTION', meta: 'Durable execution, distributed systems', section: 'description', keywords: 'about summary workflow orchestration temporal' },
+  { title: 'OPTIONS', meta: 'Languages, domains, infrastructure', section: 'options', keywords: 'skills stack python go typescript kubernetes helm docker postgres redfish rest' },
+  { title: 'HISTORY', meta: 'IBM · MSys/Aziro · Mindtree', section: 'history', keywords: 'resume cv experience work cloudability apptio cisco seagate cortx microsoft azure bmc redfish kv store semaphore locks self-healing' },
+  { title: 'EXAMPLES', meta: 'sharp · keel · daily-stack · edituh · dev-skills', section: 'examples', keywords: 'projects github open source side' },
+  { title: 'ENVIRONMENT', meta: 'Editor, shell, and what happens offline', section: 'environment', keywords: 'nvim vim zsh tmux hobbies photography driving books setup uses' },
+  { title: 'BUGS', meta: 'Known issues, honestly', section: 'bugs', keywords: 'weaknesses flaws' },
+  { title: 'SEE ALSO', meta: 'GitHub, LinkedIn, email', section: 'see-also', keywords: 'contact links hire email mail' },
+];
+
 let paletteMode = 'search'; // 'search' | 'command'
 
 function openPalette(mode) {
@@ -262,14 +332,9 @@ function renderPalette(value) {
     });
     paletteResults.appendChild(list);
   } else {
-    const items = [
-      { title: 'Home', meta: '~/kailash-yadav', section: 'home' },
-      { title: 'Projects', meta: 'Projects', section: 'projects' },
-      { title: 'Resume', meta: 'Resume', section: 'resume' },
-    ];
-    let filtered = items;
+    let filtered = searchItems;
     if (q) {
-      filtered = items.filter(it => it.title.toLowerCase().includes(q) || it.meta.toLowerCase().includes(q));
+      filtered = searchItems.filter(it => `${it.title} ${it.meta} ${it.keywords}`.toLowerCase().includes(q));
     }
     if (!filtered.length) {
       const empty = document.createElement('div');
@@ -354,8 +419,6 @@ function handleQuickKeys(e) {
 }
 
 document.addEventListener('keydown', (e) => {
-  if (handleQuickKeys(e)) return;
-
   const target = e.target;
   const typing = target && (target.tagName === 'INPUT' || target.tagName === 'TEXTAREA' || target.isContentEditable);
   const modalOpen = palette.classList.contains('open') || shortcutsModal.classList.contains('open') || commandWrap.classList.contains('is-active');
@@ -385,6 +448,8 @@ document.addEventListener('keydown', (e) => {
     return;
   }
 
+  if (handleQuickKeys(e)) return;
+
   switch (e.key) {
     case ':':
       e.preventDefault();
@@ -410,6 +475,10 @@ document.addEventListener('keydown', (e) => {
     case 'G':
       window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' });
       break;
+    case 'o':
+      e.preventDefault();
+      expandAllCommits();
+      break;
     case '}':
       e.preventDefault();
       scrollToNextSection(1);
@@ -428,7 +497,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 function scrollToNextSection(dir) {
-  const ids = ['home', ...sections];
+  const ids = sections;
   const current = activeSectionId();
   let idx = ids.indexOf(current);
   if (idx === -1) idx = 0;

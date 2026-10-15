@@ -3,16 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kailash Yadav — Software Engineer</title>
-  <meta name="description" content="Kailash Yadav — software engineer building fast, reliable software across web, desktop, and systems.">
+  <title>kailash(1) — Kailash Yadav, Software Engineer</title>
+  <meta name="description" content="The manual page for Kailash Yadav — software engineer building event-driven workflow orchestration, distributed systems, and developer tools.">
   <meta name="theme-color" content="#0b0b0d">
-  <meta property="og:title" content="Kailash Yadav — Software Engineer">
-  <meta property="og:description" content="Kailash Yadav — software engineer building fast, reliable software across web, desktop, and systems.">
+  <meta property="og:title" content="kailash(1) — Kailash Yadav, Software Engineer">
+  <meta property="og:description" content="The manual page for Kailash Yadav — software engineer building event-driven workflow orchestration, distributed systems, and developer tools.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://kaiyad.github.io/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/styles.css">
   <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg">
 </head>
@@ -21,12 +21,13 @@
   <header class="header">
     <nav class="nav">
       <div class="logo">
-        <a href="#top" data-nav>Kailash Yadav</a>
+        <a href="#top" data-nav>KAILASH(1)</a>
       </div>
       <ul id="menu">
-        <li><a href="#about" data-nav>About</a></li>
-        <li><a href="#projects" data-nav>Projects</a></li>
-        <li><a href="#resume" data-nav>Resume</a></li>
+        <li><a href="#description" data-nav>description</a></li>
+        <li><a href="#history" data-nav>history</a></li>
+        <li><a href="#examples" data-nav>examples</a></li>
+        <li><a href="#see-also" data-nav>see also</a></li>
       </ul>
       <div class="logo-switches">
         <span class="search-hint-key" title="Quick search">/</span>
@@ -38,223 +39,687 @@
     </nav>
   </header>
 
-  <main class="main" id="top">
+  <main class="main manpage" id="top">
 
-    <!-- ================= HOME INTRO ================= -->
-    <section class="home-intro">
-      <div class="home-boids" aria-hidden="true" data-boids></div>
+    <div class="man-rule man-rule--top">
+      <span>kailash(1)</span>
+      <span class="man-rule-mid">General Commands Manual</span>
+      <span>kailash(1)</span>
+    </div>
 
-      <div class="home-hero">
-        <div class="home-identity">
-          <img class="home-headshot" src="assets/img/headshot.svg" alt="Kailash Yadav">
-          <h1 class="home-name">Kailash Yadav</h1>
+    <!-- ================= NAME ================= -->
+    <section class="man-section" id="name">
+      <h2 class="man-heading">NAME</h2>
+      <div class="man-body">
+        <div class="man-name">
+          <img class="man-portrait" src="assets/img/headshot.svg" alt="Kailash Yadav">
+          <p class="man-name-line">
+            <b>Kailash Yadav</b>
+            kailash — software engineer; builds durable, event-driven systems
+            and the tools that keep them honest
+          </p>
         </div>
       </div>
-
-      <section class="home-section home-about" id="about">
-        <h2 class="home-label">About</h2>
-        <p>
-          I'm a software engineer focused on building systems that are fast,
-          reliable, and a pleasure to work with. I work across the stack — from
-          Python and Go backends to modern web and desktop applications.
-        </p>
-        <p>
-          I care about clean architecture, developer experience, and shipping
-          complete products, not demos.
-        </p>
-      </section>
-
-      <section class="home-section" id="currently">
-        <h2 class="home-label">Currently</h2>
-        <p>
-          Building <a href="https://github.com/kaiyad/edituh" target="_blank" rel="noopener">Edituh</a>,
-          a Confluence-style documentation editor that ships as a PWA and desktop
-          installers. Exploring distributed systems, networking, and developer
-          tools when I get the chance.
-        </p>
-      </section>
-
-      <section class="home-section" id="hobbies">
-        <h2 class="home-label">Hobbies</h2>
-        <p>
-          Outside of work I love long drives, photography, tinkering with
-          hardware, and unwinding with a good book.
-        </p>
-      </section>
-
-      <div class="home-links">
-        <a href="https://github.com/kaiyad" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
-          <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.61-.18 1.3-.27 2-.27s1.39.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
-        </a>
-        <a href="https://www.linkedin.com/in/kaiyad" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
-        </a>
-        <a href="mailto:kailashyadav0411@gmail.com" class="email-copy" aria-label="Email" title="Email">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        </a>
-        <span class="home-email-status" id="emailStatus">copied</span>
-      </div>
-
-      <button class="home-command-hint" data-open-help aria-haspopup="dialog">
-        <span>Type</span><kbd>:</kbd><span>help</span><span>for help navigating</span>
-      </button>
     </section>
 
-    <!-- ================= PROJECTS ================= -->
-    <section class="page-section" id="projects">
-      <h2 class="section-title">Projects</h2>
+    <!-- ================= SYNOPSIS ================= -->
+    <section class="man-section" id="synopsis">
+      <h2 class="man-heading">SYNOPSIS</h2>
+      <div class="man-body">
+<pre class="man-pre"><b>kailash</b> [<i>-l</i> python|go|typescript] [<i>-i</i> kubernetes|docker|helm]
+        [<i>-d</i> distributed-systems|workflow|storage|networking|hardware]
+        [<i>-v</i>] &lt;problem&gt;
 
-      <div class="post-list">
-
-        <article class="post-entry">
-          <header class="entry-header">
-            <h2><a href="https://github.com/kaiyad/edituh" target="_blank" rel="noopener">Edituh</a></h2>
-          </header>
-          <div class="entry-meta">
-            <span class="entry-date">Web · Desktop</span>
-          </div>
-          <div class="entry-content">
-            <p>
-              A Confluence/Notion-style documentation editor for web and desktop.
-              Built on FastAPI + React (BlockNote, Mantine) with math, diagrams,
-              bidirectional links, knowledge graph, daily notes, and a balanced
-              rope data structure for fast text handling. Ships as desktop
-              installers and a PWA.
-            </p>
-          </div>
-          <footer class="entry-footer">
-            <div class="entry-tags">
-              <span class="post-tag">TypeScript</span>
-              <span class="post-tag">React</span>
-              <span class="post-tag">FastAPI</span>
-            </div>
-          </footer>
-        </article>
-
-        <article class="post-entry">
-          <header class="entry-header">
-            <h2><a href="https://github.com/kaiyad/go-banking" target="_blank" rel="noopener">Go Banking</a></h2>
-          </header>
-          <div class="entry-meta">
-            <span class="entry-date">Backend</span>
-          </div>
-          <div class="entry-content">
-            <p>
-              A banking backend written in Go — REST API with concurrent-safe
-              transactions, SQLite persistence, and clean layered architecture.
-            </p>
-          </div>
-          <footer class="entry-footer">
-            <div class="entry-tags">
-              <span class="post-tag">Go</span>
-              <span class="post-tag">REST</span>
-              <span class="post-tag">SQLite</span>
-            </div>
-          </footer>
-        </article>
-
-        <article class="post-entry">
-          <header class="entry-header">
-            <h2><a href="https://github.com/kaiyad/Echo" target="_blank" rel="noopener">Echo</a></h2>
-          </header>
-          <div class="entry-meta">
-            <span class="entry-date">Web</span>
-          </div>
-          <div class="entry-content">
-            <p>
-              A micro-blogging platform with full authentication, post feeds,
-              following/unfollowing, and user profiles — built with Flask,
-              SQLAlchemy, and SQLite.
-            </p>
-          </div>
-          <footer class="entry-footer">
-            <div class="entry-tags">
-              <span class="post-tag">Python</span>
-              <span class="post-tag">Flask</span>
-              <span class="post-tag">SQLAlchemy</span>
-            </div>
-          </footer>
-        </article>
-
-        <article class="post-entry">
-          <header class="entry-header">
-            <h2><a href="https://github.com/kaiyad/Network-Packet-Sniffer" target="_blank" rel="noopener">Packet Sniffer</a></h2>
-          </header>
-          <div class="entry-meta">
-            <span class="entry-date">Systems</span>
-          </div>
-          <div class="entry-content">
-            <p>
-              A network packet sniffer for capturing and inspecting traffic using
-              raw sockets — a deep exploration of networking protocols.
-            </p>
-          </div>
-          <footer class="entry-footer">
-            <div class="entry-tags">
-              <span class="post-tag">Python</span>
-              <span class="post-tag">Networking</span>
-            </div>
-          </footer>
-        </article>
-
-        <article class="post-entry">
-          <header class="entry-header">
-            <h2><a href="https://github.com/kaiyad/pip2poetry" target="_blank" rel="noopener">pip2poetry</a></h2>
-          </header>
-          <div class="entry-meta">
-            <span class="entry-date">Dev Tools</span>
-          </div>
-          <div class="entry-content">
-            <p>
-              A developer tool that automates migrating projects from pip to
-              Poetry — eliminating the manual dependency setup.
-            </p>
-          </div>
-          <footer class="entry-footer">
-            <div class="entry-tags">
-              <span class="post-tag">Python</span>
-              <span class="post-tag">CLI</span>
-            </div>
-          </footer>
-        </article>
-
+<b>kailash</b> <i>--ship</i> [<i>--from-scratch</i>] [<i>--on-call</i>] &lt;product&gt;</pre>
       </div>
     </section>
 
-    <!-- ================= RESUME ================= -->
-    <section class="page-section" id="resume">
-      <h2 class="section-title">Resume</h2>
-
-      <div class="post-list">
-        <article class="post-entry">
-          <header class="entry-header">
-            <h2>Software Engineer</h2>
-          </header>
-          <div class="entry-meta">
-            <span class="entry-date">Experience</span>
-          </div>
-          <div class="entry-content">
-            <p>
-              Building and shipping production software across web, desktop, and
-              systems. Focus areas: backend APIs, developer tools, networking,
-              and clean architecture.
-            </p>
-          </div>
-          <footer class="entry-footer">
-            <div class="entry-tags">
-              <span class="post-tag">Python</span>
-              <span class="post-tag">Go</span>
-              <span class="post-tag">TypeScript</span>
-              <span class="post-tag">React</span>
-              <span class="post-tag">FastAPI</span>
-              <span class="post-tag">Distributed Systems</span>
-              <span class="post-tag">Networking</span>
-            </div>
-          </footer>
-        </article>
+    <!-- ================= DESCRIPTION ================= -->
+    <section class="man-section" id="description">
+      <h2 class="man-heading">DESCRIPTION</h2>
+      <div class="man-body">
+        <p class="man-text">
+          <b>kailash</b> takes a system that has to keep its promises while
+          things fail underneath it, and makes it do that. Eight years of it:
+          first validating the server hardware that cloud regions are built
+          from, then the control planes that orchestrate storage and recover
+          from failure, and now the workflow engine that drives cloud-savings
+          automation at IBM Apptio Cloudability.
+        </p>
+        <p class="man-text">
+          The common thread is durable execution — state that survives a
+          restart, retries that are safe to run twice, and a log you can read
+          afterwards to find out what actually happened. Started close to the
+          metal, which is why the distributed parts don't feel like magic.
+        </p>
+        <p class="man-text">
+          Off the clock, <b>kailash</b> ships developer tools: a drill CLI that
+          quizzes you on your own code, a daily digest that is immutable by
+          database trigger, and a catalogue of engineering practices for teams
+          where most of the code is now written by a model.
+        </p>
+        <button class="man-command-hint" data-open-help aria-haspopup="dialog">
+          <span>Press</span><kbd>?</kbd><span>for keys, or</span><kbd>:</kbd><span>for commands — this page is a pager.</span>
+        </button>
       </div>
-
     </section>
+
+    <!-- ================= OPTIONS ================= -->
+    <section class="man-section" id="options">
+      <h2 class="man-heading">OPTIONS</h2>
+      <div class="man-body">
+        <dl class="man-dl">
+          <dt class="man-dt">-l, --lang <i>lang</i></dt>
+          <dd class="man-dd">
+            Python for anything that has to be readable a year later. Go when
+            it should be one binary with no runtime. TypeScript when there is a
+            UI attached. C and shell when the machine insists.
+          </dd>
+
+          <dt class="man-dt">-d, --domain <i>domain</i></dt>
+          <dd class="man-dd">
+            Workflow orchestration and durable execution, distributed systems,
+            object storage, networking, BMC and server hardware, developer
+            tooling.
+          </dd>
+
+          <dt class="man-dt">-i, --infra <i>target</i></dt>
+          <dd class="man-dd">
+            Kubernetes (Helm, StatefulSets, operators), Docker, Postgres,
+            SQLite, REST and event-driven interfaces, DMTF Redfish for anything
+            with a baseboard management controller.
+          </dd>
+
+          <dt class="man-dt">--ship</dt>
+          <dd class="man-dd">
+            Takes a thing to production rather than to a demo: migrations,
+            rollout, dashboards, the pager rotation, and the postmortem when it
+            still goes wrong.
+          </dd>
+
+          <dt class="man-dt">-v, --verbose</dt>
+          <dd class="man-dd">
+            Will explain why at-least-once delivery is fine, or the rope data
+            structure behind Edituh, entirely unprompted. Repeat for diagrams.
+          </dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ================= HISTORY ================= -->
+    <section class="man-section" id="history">
+      <h2 class="man-heading">HISTORY</h2>
+      <div class="man-body">
+        <p class="man-text">
+          Eight years, newest first. Click a commit to see the diff.
+        </p>
+
+        <div class="gitlog-cmdline">
+          <code>$ <b>git log</b> --graph --decorate --stat career.git</code>
+          <button class="gitlog-toggle" id="gitlogToggle" aria-pressed="false">--oneline</button>
+        </div>
+
+        <ol class="gitlog" id="gitlog">
+
+          <li class="commit">
+            <span class="commit-marker" aria-hidden="true">*</span>
+            <button class="commit-head" aria-expanded="true" aria-controls="c-ibm">
+              <span class="commit-hash">a91f2c4</span>
+              <span class="commit-refs">
+                <span class="ref ref--head">HEAD &rarr; main</span>
+                <span class="ref">tag: ibm</span>
+              </span>
+              <span class="commit-subject">feat(orchestrator): durable, event-driven workflow engine for cloud savings</span>
+              <span class="commit-caret" aria-hidden="true">&rsaquo;</span>
+            </button>
+            <div class="commit-meta">
+              <span>IBM &middot; Apptio Cloudability</span>
+              <span>Software Engineer</span>
+              <span>2024-05 &rarr; present</span>
+            </div>
+            <div class="commit-body" id="c-ibm">
+              <ul class="diff">
+                <li class="diff-meta">diff --git a/cloudability b/cloudability</li>
+                <li class="diff-add">
+                  Building the workflow orchestrator at the center of an
+                  event-driven execution system — the Temporal-shaped problem:
+                  workflow definitions, activity dispatch, retry and backoff
+                  policy, timers, and state checkpointed so a run survives a
+                  process restart and resumes instead of starting over.
+                </li>
+                <li class="diff-add">
+                  Made at-least-once delivery safe for actions that move real
+                  money — idempotency keys, deduplication, and exactly-once
+                  side effects for savings automation that resizes, schedules
+                  and commits customer cloud spend.
+                </li>
+                <li class="diff-add">
+                  Designed for operators, not just for the happy path: every
+                  run is inspectable, replayable, and cancellable, so support
+                  can answer "what did it do to my account at 3am" from the
+                  event log rather than from a guess.
+                </li>
+                <li class="diff-add">
+                  Pulled into customer deep-dives and proofs of concept, turning
+                  "can it handle our approval flow?" into a working demo —
+                  work that contributed directly to closing deals.
+                </li>
+              </ul>
+              <div class="commit-stat">4 files changed, 1842 insertions(+)</div>
+              <div class="man-tags commit-tags">
+                <span class="man-tag">Durable execution</span>
+                <span class="man-tag">Event-driven</span>
+                <span class="man-tag">Distributed systems</span>
+                <span class="man-tag">FinOps</span>
+                <span class="man-tag">Kubernetes</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="commit">
+            <span class="commit-marker" aria-hidden="true">*</span>
+            <button class="commit-head" aria-expanded="false" aria-controls="c-cisco">
+              <span class="commit-hash">3d8e07b</span>
+              <span class="commit-refs">
+                <span class="ref">tag: msys/aziro</span>
+              </span>
+              <span class="commit-subject">feat(self-healing): closed-loop failure detection and correction platform</span>
+              <span class="commit-caret" aria-hidden="true">&rsaquo;</span>
+            </button>
+            <div class="commit-meta">
+              <span>MSys Technologies (now Aziro) &middot; for Cisco</span>
+              <span>Senior Software Engineer</span>
+              <span>2021-08 &rarr; 2024-05</span>
+            </div>
+            <div class="commit-body" id="c-cisco" hidden>
+              <ul class="diff">
+                <li class="diff-meta">diff --git a/self-healing b/self-healing</li>
+                <li class="diff-add">
+                  Worked on a platform that detects a failure in a running
+                  system, classifies it, and executes the correction itself —
+                  signal ingestion, diagnosis, remediation playbooks, and
+                  verification that the fix actually took.
+                </li>
+                <li class="diff-add">
+                  Guardrails are the hard part of automated remediation:
+                  bounded retries, blast-radius limits, a circuit breaker when
+                  the same fault keeps recurring, and an audit trail for every
+                  action taken without a human in the loop.
+                </li>
+                <li class="diff-add">
+                  Shrank the set of alerts that need a person — the operator
+                  reads what was corrected instead of correcting it.
+                </li>
+              </ul>
+              <div class="commit-stat">3 files changed, 976 insertions(+)</div>
+              <div class="man-tags commit-tags">
+                <span class="man-tag">Python</span>
+                <span class="man-tag">Automated remediation</span>
+                <span class="man-tag">Observability</span>
+                <span class="man-tag">Reliability</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="commit">
+            <span class="commit-marker" aria-hidden="true">*</span>
+            <button class="commit-head" aria-expanded="false" aria-controls="c-cortx">
+              <span class="commit-hash">c57b1af</span>
+              <span class="commit-subject">feat(cortx): provision and orchestrate object storage on Kubernetes</span>
+              <span class="commit-caret" aria-hidden="true">&rsaquo;</span>
+            </button>
+            <div class="commit-meta">
+              <span>MSys Technologies &middot; for Seagate</span>
+              <span>2022 &rarr; 2024</span>
+            </div>
+            <div class="commit-body" id="c-cortx" hidden>
+              <ul class="diff">
+                <li class="diff-meta">diff --git a/cortx b/cortx</li>
+                <li class="diff-add">
+                  Provisioning and orchestration for CORTX, Seagate's
+                  S3-compatible object store — the MinIO-shaped problem at
+                  exabyte ambitions, deployed onto Kubernetes.
+                </li>
+                <li class="diff-add">
+                  Helm-packaged control and data planes: StatefulSets for the
+                  nodes that own durable state, config and secret wiring,
+                  storage-class and device mapping, ordered bring-up, and
+                  rolling upgrades that don't drop the data path.
+                </li>
+                <li class="diff-add">
+                  Turned a hand-run bring-up runbook into a repeatable deploy —
+                  a cluster from nothing in minutes, the same way every time,
+                  which is what made the test and demo cycle usable.
+                </li>
+              </ul>
+              <div class="commit-stat">2 files changed, 1134 insertions(+)</div>
+              <div class="man-tags commit-tags">
+                <span class="man-tag">Kubernetes</span>
+                <span class="man-tag">Helm</span>
+                <span class="man-tag">Object storage</span>
+                <span class="man-tag">S3</span>
+                <span class="man-tag">Python</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="commit">
+            <span class="commit-marker" aria-hidden="true">*</span>
+            <button class="commit-head" aria-expanded="false" aria-controls="c-libs">
+              <span class="commit-hash">9b2d64e</span>
+              <span class="commit-subject">feat(lib): distributed primitives — KV store, leased semaphores, activity monitor</span>
+              <span class="commit-caret" aria-hidden="true">&rsaquo;</span>
+            </button>
+            <div class="commit-meta">
+              <span>MSys Technologies</span>
+              <span>internal libraries</span>
+              <span>2021 &rarr; 2024</span>
+            </div>
+            <div class="commit-body" id="c-libs" hidden>
+              <ul class="diff">
+                <li class="diff-meta">diff --git a/lib b/lib</li>
+                <li class="diff-add">
+                  A key-value store used as the control plane's source of
+                  truth, with watch semantics so services react to a config
+                  change instead of polling for one.
+                </li>
+                <li class="diff-add">
+                  Distributed semaphore locks with leases, TTLs and renewal —
+                  caps concurrency on a shared resource and stops two nodes
+                  from running the same remediation at the same time. Correct
+                  behaviour when the lock holder dies is the whole design.
+                </li>
+                <li class="diff-add">
+                  An activity-monitor framework for long-running work:
+                  heartbeats, deadlines, stuck-task detection and cancellation.
+                  Written once, then adopted by the services around it.
+                </li>
+              </ul>
+              <div class="commit-stat">3 files changed, 742 insertions(+)</div>
+              <div class="man-tags commit-tags">
+                <span class="man-tag">Distributed systems</span>
+                <span class="man-tag">Concurrency</span>
+                <span class="man-tag">Leases &amp; locks</span>
+                <span class="man-tag">Library design</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="commit">
+            <span class="commit-marker" aria-hidden="true">*</span>
+            <button class="commit-head" aria-expanded="false" aria-controls="c-redfish">
+              <span class="commit-hash">e14a73f</span>
+              <span class="commit-refs">
+                <span class="ref">tag: mindtree</span>
+              </span>
+              <span class="commit-subject">feat(redfish): out-of-band server management over DMTF Redfish</span>
+              <span class="commit-caret" aria-hidden="true">&rsaquo;</span>
+            </button>
+            <div class="commit-meta">
+              <span>Mindtree &middot; for Microsoft Azure</span>
+              <span>Software Engineer</span>
+              <span>2018-02 &rarr; 2021-08</span>
+            </div>
+            <div class="commit-body" id="c-redfish" hidden>
+              <ul class="diff">
+                <li class="diff-meta">diff --git a/bmc b/bmc</li>
+                <li class="diff-add">
+                  Automated the baseboard management controller through the
+                  DMTF Redfish API: hardware inventory, firmware update, power
+                  and boot control, sensor and telemetry collection, and SEL
+                  log capture — all of it out-of-band, with the host down.
+                </li>
+                <li class="diff-add">
+                  Replaced per-vendor IPMI scripting with one Redfish client
+                  that worked across server generations, so a new SKU arriving
+                  in the lab was a config entry rather than a rewrite.
+                </li>
+                <li class="diff-add">
+                  This is the layer where a datacenter stops being an
+                  abstraction: if the automation is wrong, somebody walks to
+                  the rack.
+                </li>
+              </ul>
+              <div class="commit-stat">2 files changed, 688 insertions(+)</div>
+              <div class="man-tags commit-tags">
+                <span class="man-tag">Python</span>
+                <span class="man-tag">DMTF Redfish</span>
+                <span class="man-tag">BMC / IPMI</span>
+                <span class="man-tag">REST</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="commit">
+            <span class="commit-marker" aria-hidden="true">*</span>
+            <button class="commit-head" aria-expanded="false" aria-controls="c-azure">
+              <span class="commit-hash">6a0bb92</span>
+              <span class="commit-subject">test(azure): validation suites for datacenter servers and components</span>
+              <span class="commit-caret" aria-hidden="true">&rsaquo;</span>
+            </button>
+            <div class="commit-meta">
+              <span>Mindtree &middot; for Microsoft Azure Cloud Infrastructure</span>
+              <span>2018 &rarr; 2021</span>
+            </div>
+            <div class="commit-body" id="c-azure" hidden>
+              <ul class="diff">
+                <li class="diff-meta">diff --git a/validation b/validation</li>
+                <li class="diff-add">
+                  Validated the servers and components that Azure regions are
+                  built out of, before they reached the fleet: CPUs, memory,
+                  disks and NVMe, network cards, storage controllers and
+                  expansion devices.
+                </li>
+                <li class="diff-add">
+                  Functional, stress, burn-in and power-cycle runs; triaged the
+                  failures that came out of them with vendors, down to the
+                  firmware revision or the errant component.
+                </li>
+                <li class="diff-add">
+                  Built the automation that turned a manual test pass into a
+                  scheduled run across racks, with results that could be
+                  compared between hardware revisions instead of retold.
+                </li>
+              </ul>
+              <div class="commit-stat">4 files changed, 1420 insertions(+)</div>
+              <div class="man-tags commit-tags">
+                <span class="man-tag">Python</span>
+                <span class="man-tag">Hardware validation</span>
+                <span class="man-tag">Test automation</span>
+                <span class="man-tag">Azure</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="commit">
+            <span class="commit-marker" aria-hidden="true">*</span>
+            <button class="commit-head" aria-expanded="false" aria-controls="c-lab">
+              <span class="commit-hash">2f5c113</span>
+              <span class="commit-subject">chore(lab): servers, switches, fabric and a lot of cable</span>
+              <span class="commit-caret" aria-hidden="true">&rsaquo;</span>
+            </button>
+            <div class="commit-meta">
+              <span>Mindtree &middot; server lab</span>
+              <span>2018 &rarr; 2020</span>
+            </div>
+            <div class="commit-body" id="c-lab" hidden>
+              <ul class="diff">
+                <li class="diff-meta">diff --git a/lab b/lab</li>
+                <li class="diff-add">
+                  Lived in a server lab: racking and cabling, BIOS and firmware
+                  levels, network and storage fabric, swapping disks, DIMMs and
+                  NICs to reproduce a failure on purpose.
+                </li>
+                <li class="diff-add">
+                  Learned to read a machine through its logs and its sensors
+                  until the root cause stopped being a guess — the habit that
+                  everything since has been built on.
+                </li>
+              </ul>
+              <div class="commit-stat">1 file changed, 310 insertions(+)</div>
+              <div class="man-tags commit-tags">
+                <span class="man-tag">Servers</span>
+                <span class="man-tag">Networking</span>
+                <span class="man-tag">Storage</span>
+                <span class="man-tag">Linux</span>
+              </div>
+            </div>
+          </li>
+
+          <li class="commit">
+            <span class="commit-marker" aria-hidden="true">*</span>
+            <button class="commit-head" aria-expanded="false" aria-controls="c-init">
+              <span class="commit-hash">e5ff100</span>
+              <span class="commit-refs">
+                <span class="ref">root</span>
+              </span>
+              <span class="commit-subject">init: picked up Python, never put it down</span>
+              <span class="commit-caret" aria-hidden="true">&rsaquo;</span>
+            </button>
+            <div class="commit-meta">
+              <span>Self-taught</span>
+              <span>pre-2018</span>
+            </div>
+            <div class="commit-body" id="c-init" hidden>
+              <ul class="diff">
+                <li class="diff-meta">diff --git a/dev/null b/career</li>
+                <li class="diff-add">
+                  Data structures, algorithms, a packet sniffer written to find
+                  out what was actually on the wire, and the first program that
+                  did something useful for somebody else.
+                </li>
+              </ul>
+              <div class="commit-stat">1 file changed, 1 insertion(+)</div>
+            </div>
+          </li>
+
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= EXAMPLES ================= -->
+    <section class="man-section" id="examples">
+      <h2 class="man-heading">EXAMPLES</h2>
+      <div class="man-body">
+        <p class="man-text">
+          Things built outside work hours, each one because a tool I wanted
+          didn't exist.
+        </p>
+
+        <div class="man-example">
+          <span class="man-example-title">Keep your own code in your head</span>
+          <code class="man-example-cmd">sharp drill</code>
+          <p>
+            A local CLI that picks a function you wrote, blanks its body or
+            plants a one-token bug in it, and makes you put it back with no AI
+            and no autocomplete — then tracks whether you're getting faster. A
+            card is only offered if your test suite actually catches the edit,
+            so every drill has a real pass/fail oracle. No server, no account,
+            no network call: all state is one SQLite file.
+          </p>
+          <div class="man-example-footer">
+            <a class="man-example-link" href="https://github.com/kaiyad/sharp" target="_blank" rel="noopener">github.com/kaiyad/sharp</a>
+            <div class="man-tags">
+              <span class="man-tag">TypeScript</span>
+              <span class="man-tag">node:sqlite</span>
+              <span class="man-tag">CLI</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="man-example">
+          <span class="man-example-title">Engineering practices for when the model writes the code</span>
+          <code class="man-example-cmd">ctxc build &amp;&amp; i2e run --gate</code>
+          <p>
+            Twenty-eight proposed practices for teams where most code is
+            written by a model, held as data so the tools and the docs can't
+            drift apart — and working first versions of the four that change
+            the delivery pipeline most: <b>ctxc</b> compiles decision records,
+            incidents and rules into a versioned context artifact and lints it;
+            <b>i2e</b> turns every postmortem into a permanent eval case that
+            gates prompt and model changes; <b>friction</b> charges agent
+            stalls and thrash to the module that caused them; <b>tier</b>
+            derives how much autonomy a change is allowed from its blast
+            radius. Local, zero-dependency Node.
+          </p>
+          <div class="man-example-footer">
+            <a class="man-example-link" href="https://github.com/kaiyad/keel" target="_blank" rel="noopener">github.com/kaiyad/keel</a>
+            <div class="man-tags">
+              <span class="man-tag">TypeScript</span>
+              <span class="man-tag">Agent tooling</span>
+              <span class="man-tag">Evals</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="man-example">
+          <span class="man-example-title">One frozen edition of software news a day</span>
+          <code class="man-example-cmd">npm run daily</code>
+          <p>
+            A dated daily digest collated from Hacker News, Lobsters, GitHub,
+            arXiv, Reddit and ~90 engineering blogs and changelogs — 19 ranked
+            entries plus a hand-written curriculum unit, about a fifteen-minute
+            read. An edition is frozen when it publishes and never changes
+            again, enforced by Postgres triggers rather than by application
+            code, because a feed that keeps backfilling has no stable
+            yesterday.
+          </p>
+          <div class="man-example-footer">
+            <a class="man-example-link" href="https://daily-stack-xi.vercel.app" target="_blank" rel="noopener">daily-stack-xi.vercel.app</a>
+            <a class="man-example-link" href="https://github.com/kaiyad/daily-stack" target="_blank" rel="noopener">source</a>
+            <div class="man-tags">
+              <span class="man-tag">TypeScript</span>
+              <span class="man-tag">Postgres</span>
+              <span class="man-tag">Ingestion</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="man-example">
+          <span class="man-example-title">A documentation workspace that works offline</span>
+          <code class="man-example-cmd">edituh --desktop</code>
+          <p>
+            A Confluence/Notion-style documentation editor for web and desktop:
+            math, diagrams, bidirectional links, a knowledge graph and daily
+            notes, on a balanced rope so large documents stay fast to edit.
+            FastAPI and React (BlockNote, Mantine), shipping as desktop
+            installers and a PWA.
+          </p>
+          <div class="man-example-footer">
+            <a class="man-example-link" href="https://github.com/kaiyad/edituh" target="_blank" rel="noopener">github.com/kaiyad/edituh</a>
+            <div class="man-tags">
+              <span class="man-tag">TypeScript</span>
+              <span class="man-tag">React</span>
+              <span class="man-tag">FastAPI</span>
+              <span class="man-tag">Rope</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="man-example">
+          <span class="man-example-title">Make every engineer's agent follow the same process</span>
+          <code class="man-example-cmd">cp -r skills/ ~/.claude/skills/</code>
+          <p>
+            A small, composable set of development skills for AI coding agents,
+            built to reduce variance rather than to automate thinking away. The
+            organising principle is that a skill guides and does not enforce,
+            so anything mandatory belongs in CI and the skills cover the
+            judgment-heavy process CI can't check — spec, design, pre-mortem,
+            implement, test, review, ship.
+          </p>
+          <div class="man-example-footer">
+            <a class="man-example-link" href="https://github.com/kaiyad/dev-skills" target="_blank" rel="noopener">github.com/kaiyad/dev-skills</a>
+            <div class="man-tags">
+              <span class="man-tag">Agent skills</span>
+              <span class="man-tag">Python</span>
+              <span class="man-tag">Process</span>
+            </div>
+          </div>
+        </div>
+
+        <p class="man-text">
+          <em>Earlier:</em>
+          <a href="https://github.com/kaiyad/go-banking" target="_blank" rel="noopener">go-banking</a> (concurrent-safe
+          transaction API in Go),
+          <a href="https://github.com/kaiyad/Network-Packet-Sniffer" target="_blank" rel="noopener">packet sniffer</a>
+          (raw sockets, one protocol at a time),
+          <a href="https://github.com/kaiyad/Echo" target="_blank" rel="noopener">Echo</a> (Flask micro-blogging),
+          <a href="https://github.com/kaiyad/pip2poetry" target="_blank" rel="noopener">pip2poetry</a> (one less
+          afternoon of manual migration).
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= ENVIRONMENT ================= -->
+    <section class="man-section" id="environment">
+      <h2 class="man-heading">ENVIRONMENT</h2>
+      <div class="man-body">
+        <dl class="man-dl">
+          <dt class="man-dt">EDITOR</dt>
+          <dd class="man-dd">
+            nvim. This page was a Vim-themed portfolio before it grew up into a
+            manual page; the keybindings survived the refactor.
+          </dd>
+
+          <dt class="man-dt">SHELL</dt>
+          <dd class="man-dd">zsh and tmux, one window per problem.</dd>
+
+          <dt class="man-dt">PAGER</dt>
+          <dd class="man-dd">less -R, which is why <kbd>j</kbd>, <kbd>k</kbd>, <kbd>gg</kbd> and <kbd>G</kbd> work here.</dd>
+
+          <dt class="man-dt">OFFLINE</dt>
+          <dd class="man-dd">
+            Long drives with no destination, a camera, hardware taken apart on
+            the desk, and a book that isn't about computers.
+          </dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ================= BUGS ================= -->
+    <section class="man-section" id="bugs">
+      <h2 class="man-heading">BUGS</h2>
+      <div class="man-body">
+        <ul class="man-list">
+          <li>
+            Reaches for a distributed primitive before asking whether one
+            process would have done. Aware of it; still does it.
+          </li>
+          <li>
+            Will rewrite your build tooling if left unattended for a sprint.
+          </li>
+          <li>
+            Wants the first version to be right, which costs more than shipping
+            the second version would have. Mitigated, not fixed.
+          </li>
+          <li>
+            Cannot leave a manual page unread, including this one.
+          </li>
+        </ul>
+        <p class="man-text">
+          Report bugs to the address in <b>SEE ALSO</b>.
+        </p>
+      </div>
+    </section>
+
+    <!-- ================= SEE ALSO ================= -->
+    <section class="man-section" id="see-also">
+      <h2 class="man-heading">SEE ALSO</h2>
+      <div class="man-body">
+        <dl class="man-dl">
+          <dt class="man-dt"><a href="https://github.com/kaiyad" target="_blank" rel="noopener">github(1)</a></dt>
+          <dd class="man-dd">github.com/kaiyad — the code, including the parts that didn't work.</dd>
+
+          <dt class="man-dt"><a href="https://www.linkedin.com/in/kaiyad" target="_blank" rel="noopener">linkedin(1)</a></dt>
+          <dd class="man-dd">linkedin.com/in/kaiyad — the same history, in the formal register.</dd>
+
+          <dt class="man-dt"><a href="mailto:kailashyadav0411@gmail.com">mail(1)</a></dt>
+          <dd class="man-dd">kailashyadav0411@gmail.com — fastest way to reach me.</dd>
+
+          <dt class="man-dt"><a href="https://daily-stack-xi.vercel.app" target="_blank" rel="noopener">daily-stack(8)</a></dt>
+          <dd class="man-dd">Today's edition, if you'd rather read something else.</dd>
+        </dl>
+
+        <div class="man-links">
+          <a href="https://github.com/kaiyad" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.61-.18 1.3-.27 2-.27s1.39.09 2 .27c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+          </a>
+          <a href="https://www.linkedin.com/in/kaiyad" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 110-4.12 2.06 2.06 0 010 4.12zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.55C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+          </a>
+          <a href="mailto:kailashyadav0411@gmail.com" class="email-copy" aria-label="Email" title="Email — click to copy">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+          <span class="man-email-status" id="emailStatus">copied</span>
+        </div>
+      </div>
+    </section>
+
+    <div class="man-rule man-rule--bottom">
+      <span>Kailash Yadav</span>
+      <span class="man-rule-mid">2026-10-16</span>
+      <span>kailash(1)</span>
+    </div>
 
   </main>
 
@@ -271,11 +736,11 @@
     <div class="statusline-main">
       <div class="statusline-left">
         <span class="statusline-mode" id="statusMode">NORMAL</span>
-        <span class="statusline-section" id="statusSection">~</span>
-        <span class="statusline-path" id="statusPath">~/kailash-yadav</span>
+        <span class="statusline-section" id="statusSection">NAME</span>
+        <span class="statusline-path" id="statusPath">man://kailash.1</span>
       </div>
       <div class="statusline-right">
-        <span class="statusline-position" id="statusPosition">1:1</span>
+        <span class="statusline-position" id="statusPosition">1:0</span>
       </div>
     </div>
     <div class="statusline-command-wrap" id="commandWrap">
@@ -292,7 +757,7 @@
       <div class="command-palette-header">
         <svg class="command-palette-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.35-4.35"/></svg>
         <span class="command-palette-prompt" aria-hidden="true">:</span>
-        <input id="command-palette-input" placeholder="Search or type a command…" autocomplete="off" spellcheck="false">
+        <input id="command-palette-input" placeholder="Search a section or type a command…" autocomplete="off" spellcheck="false">
         <span class="command-palette-hint">esc</span>
       </div>
       <div class="command-palette-results" id="commandPaletteResults"></div>
@@ -304,14 +769,14 @@
     <div class="shortcuts-modal-backdrop" data-close-shortcuts></div>
     <div class="shortcuts-modal-content">
       <div class="shortcuts-modal-header">
-        <h2 class="shortcuts-modal-title">:help — Shortcuts</h2>
+        <h2 class="shortcuts-modal-title">man kailash — SUMMARY OF KEYS</h2>
         <button class="shortcuts-modal-close" data-close-shortcuts aria-label="Close"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
       </div>
       <div class="shortcuts-help-grid">
         <section class="shortcuts-section">
           <h3 class="shortcuts-section-title">Keys</h3>
           <div class="shortcuts-list">
-            <div class="shortcut-row"><span class="shortcut-label">Open search</span><span class="shortcut-keys"><span class="shortcut-combo"><kbd class="shortcut-key">⌘</kbd><kbd class="shortcut-key">K</kbd></span></span></div>
+            <div class="shortcut-row"><span class="shortcut-label">Search sections</span><span class="shortcut-keys"><span class="shortcut-combo"><kbd class="shortcut-key">⌘</kbd><kbd class="shortcut-key">K</kbd></span></span></div>
             <div class="shortcut-row"><span class="shortcut-label">Quick search</span><span class="shortcut-keys"><kbd class="shortcut-key">/</kbd></span></div>
             <div class="shortcut-row"><span class="shortcut-label">Command mode</span><span class="shortcut-keys"><kbd class="shortcut-key">:</kbd></span></div>
             <div class="shortcut-row"><span class="shortcut-label">Show this help</span><span class="shortcut-keys"><kbd class="shortcut-key">?</kbd></span></div>
@@ -321,18 +786,24 @@
             <div class="shortcut-row"><span class="shortcut-label">Bottom</span><span class="shortcut-keys"><kbd class="shortcut-key">G</kbd></span></div>
             <div class="shortcut-row"><span class="shortcut-label">Next section</span><span class="shortcut-keys"><kbd class="shortcut-key">}</kbd></span></div>
             <div class="shortcut-row"><span class="shortcut-label">Previous section</span><span class="shortcut-keys"><kbd class="shortcut-key">{</kbd></span></div>
+            <div class="shortcut-row"><span class="shortcut-label">Expand all commits</span><span class="shortcut-keys"><kbd class="shortcut-key">o</kbd></span></div>
             <div class="shortcut-row"><span class="shortcut-label">Close</span><span class="shortcut-keys"><kbd class="shortcut-key">Esc</kbd></span></div>
           </div>
         </section>
         <section class="shortcuts-section">
           <h3 class="shortcuts-section-title">Commands</h3>
-          <div class="command-help-row"><span>:home</span><kbd class="command-help-key">Open home</kbd></div>
-          <div class="command-help-row"><span>:projects</span><kbd class="command-help-key">Open projects</kbd></div>
-          <div class="command-help-row"><span>:resume</span><kbd class="command-help-key">Open resume</kbd></div>
+          <div class="command-help-row"><span>:name</span><kbd class="command-help-key">Top of the page</kbd></div>
+          <div class="command-help-row"><span>:description</span><kbd class="command-help-key">What I do</kbd></div>
+          <div class="command-help-row"><span>:options</span><kbd class="command-help-key">Stack and domains</kbd></div>
+          <div class="command-help-row"><span>:history</span><kbd class="command-help-key">Experience, as git log</kbd></div>
+          <div class="command-help-row"><span>:log</span><kbd class="command-help-key">Toggle --oneline</kbd></div>
+          <div class="command-help-row"><span>:examples</span><kbd class="command-help-key">Projects</kbd></div>
+          <div class="command-help-row"><span>:environment</span><kbd class="command-help-key">Setup and hobbies</kbd></div>
+          <div class="command-help-row"><span>:bugs</span><kbd class="command-help-key">Known issues</kbd></div>
+          <div class="command-help-row"><span>:seealso</span><kbd class="command-help-key">Links and email</kbd></div>
           <div class="command-help-row"><span>:help</span><kbd class="command-help-key">Show this help</kbd></div>
           <div class="command-help-row"><span>:theme</span><kbd class="command-help-key">Toggle theme</kbd></div>
-          <div class="command-help-row"><span>:top</span><kbd class="command-help-key">Scroll to top</kbd></div>
-          <div class="command-help-row"><span>:bot</span><kbd class="command-help-key">Scroll to bottom</kbd></div>
+          <div class="command-help-row"><span>:q</span><kbd class="command-help-key">Back to the top</kbd></div>
         </section>
       </div>
     </div>

@@ -1,0 +1,12 @@
+## Keep Jekyll from processing the `assets/` and other directories
+.nojekyll
+
+# OS
+.DS_Store
+
+# Editor
+.vscode/
+.idea/
+
+# Logs
+*.log
